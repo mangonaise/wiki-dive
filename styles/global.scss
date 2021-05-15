@@ -7,8 +7,10 @@
 
 :root {
   --background-color: rgb(243, 243, 243);
+  --background-color-alt: rgb(236, 236, 236);
   --text-color: rgb(54, 53, 53);
   --highlight-color: rgb(0, 175, 137);
+  --separator-color: rgb(225, 225, 225);
   --outline-color: inherit;
 }
 
@@ -30,6 +32,7 @@ h1, h2, h3 {
 
 button {
   font-family: inherit;
+  color: var(--text-color);
 }
 
 #app {
