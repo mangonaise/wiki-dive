@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Recursive';
+  src: url('../public/font/Recursive_VF_1.077.woff2') format('woff2 supports variations'),
+       url('../public/font/Recursive_VF_1.077.woff2') format('woff2-variations');
+  font-weight: 300 800;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Recursive', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
