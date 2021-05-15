@@ -1,0 +1,59 @@
+.logo {
+  font-weight: 450;
+  font-size: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+
+  span {
+    background-color: var(--logo-color);
+    color: var(--background-color);
+    padding: 3px 6px;
+    margin: 0 4px;
+    border-radius: 2px;
+    font-weight: 700;
+    box-shadow: var(--background-color) 5px 5px 0px -2px, var(--logo-color) 5px 5px 0px 0px;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: solid 1px rgb(221, 221, 221);
+  user-select: none;
+
+  button {
+    background: none;
+    border: none;
+    margin: 25px;
+    padding: 3px 0;
+    font-size: 15px;
+    font-weight: 450;
+    border-bottom: solid 2px var(--background-color);
+    transition: border-color 200ms, font-weight 200ms;
+
+    &.active {
+      border-color: var(--logo-color);
+      font-weight: 800;
+      animation: font-slant forwards 250ms;
+    }
+
+    &:not(.active):hover {
+      border-color: var(--text-color);
+    }
+
+    &:focus {
+      outline-color: var(--outline-color);
+    }
+  }
+}
+
+@keyframes font-slant {
+  0% {
+    font-variation-settings: 'slnt' 0, 'CRSV' 0;
+  }
+
+  100% {
+    font-variation-settings: 'slnt' -10, 'CRSV' 0;
+  }
+}

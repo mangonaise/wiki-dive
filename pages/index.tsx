@@ -6,7 +6,6 @@ export default function Home() {
       <Head>
         <title>wiki-dive</title>
       </Head>
-      <h1>wiki-dive</h1>
     </div>
   )
 }

@@ -5,9 +5,25 @@
   font-weight: 300 800;
 }
 
+:root {
+  --background-color: rgb(243, 243, 243);
+  --text-color: rgb(54, 53, 53);
+  --logo-color: rgb(0, 175, 137);
+  --outline-color: inherit;
+}
+
 body {
   box-sizing: border-box;
   font-family: 'Recursive', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  font-family: inherit;
+}
+
+#app {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 10px;
