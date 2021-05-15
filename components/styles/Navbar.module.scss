@@ -24,7 +24,7 @@
   border-bottom: solid 1px rgb(221, 221, 221);
   user-select: none;
 
-  button {
+  .navLink {
     background: none;
     border: none;
     margin: 25px;
@@ -47,6 +47,31 @@
     &:focus {
       outline-color: var(--outline-color);
     }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar {
+    justify-content: center;
+    margin: 15px;
+    border-bottom: none;
+  }
+
+  .linksContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid 2px rgb(221, 221, 221);
+  }
+
+  .navLink {
+    margin: 0 !important;
+    height: fit-content;
   }
 }
 
