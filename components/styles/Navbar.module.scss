@@ -1,3 +1,5 @@
+@use "/styles/util";
+
 .logo {
   font-weight: 450;
   font-size: 30px;
@@ -5,13 +7,13 @@
   cursor: pointer;
 
   span {
-    background-color: var(--logo-color);
+    background-color: var(--highlight-color);
     color: var(--background-color);
     padding: 3px 6px;
     margin: 0 4px;
     border-radius: 2px;
     font-weight: 700;
-    box-shadow: var(--background-color) 5px 5px 0px -2px, var(--logo-color) 5px 5px 0px 0px;
+    @include util.border-shadow(var(--highlight-color));
   }
 }
 
@@ -33,7 +35,7 @@
     transition: border-color 200ms, font-weight 200ms;
 
     &.active {
-      border-color: var(--logo-color);
+      border-color: var(--highlight-color);
       font-weight: 800;
       animation: font-slant forwards 250ms;
     }

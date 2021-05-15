@@ -8,8 +8,12 @@
 :root {
   --background-color: rgb(243, 243, 243);
   --text-color: rgb(54, 53, 53);
-  --logo-color: rgb(0, 175, 137);
+  --highlight-color: rgb(0, 175, 137);
   --outline-color: inherit;
+}
+
+::selection {
+  background: rgba(0, 175, 137, 0.2);
 }
 
 body {
@@ -24,7 +28,7 @@ button {
 }
 
 #app {
-  max-width: 800px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 10px;
 }
