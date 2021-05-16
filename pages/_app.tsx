@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/global.scss';
@@ -8,6 +9,9 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <div id="app">
+      <Head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      </Head>
       <Navbar />
       <Component {...pageProps} />
     </div>
