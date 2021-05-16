@@ -12,6 +12,28 @@
   --highlight-color: rgb(0, 175, 137);
   --separator-color: rgb(225, 225, 225);
   --outline-color: inherit;
+
+  --icon-red: rgb(218, 89, 89);
+  --icon-green: rgb(111, 202, 126);
+  --icon-blue: rgb(123, 148, 219);
+  --icon-pink: rgb(224, 109, 189);
+
+  --category-animals: var(--icon-green);
+  --category-catastrophe: var(--icon-red);
+  --category-history: var(--icon-green);
+  --category-internet: var(--icon-pink);
+  --category-language: var(--icon-blue);
+  --category-mathematics: var(--icon-blue);
+  --category-medicine: var(--icon-red);
+  --category-nature: var(--icon-green);
+  --category-people: var(--icon-red);
+  --category-places: var(--icon-red);
+  --category-politics: var(--icon-blue);
+  --category-psychology: var(--icon-pink);
+  --category-science: var(--icon-green); 
+  --category-society: var(--icon-blue);
+  --category-space: var(--icon-pink);
+  --category-technology: var(--icon-pink); 
 }
 
 ::selection {
@@ -30,9 +52,20 @@ h1, h2, h3 {
   margin-block-start: 0;
 }
 
+p {
+  margin: 0;
+}
+
 button {
   font-family: inherit;
   color: var(--text-color);
+}
+
+blockquote {
+  padding: 0 1em;
+  border-left: .25em solid #cacaca;
+  margin-left: 0;
+  opacity: 0.8;
 }
 
 #app {
