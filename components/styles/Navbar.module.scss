@@ -44,14 +44,10 @@
     &:not(.active):hover {
       border-color: var(--text-color);
     }
-
-    &:focus {
-      outline-color: var(--outline-color);
-    }
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
   .navbar {
     margin: 15px;
     border-bottom: none;
@@ -68,6 +64,7 @@
     align-items: center;
     border-top: solid 2px var(--separator-color);
     background-color: var(--background-color);
+    z-index: 1;
   }
 
   .navLink {
