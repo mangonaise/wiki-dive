@@ -11,6 +11,8 @@
   --text-color: rgb(80, 80, 80);
   --highlight-color: rgb(0, 175, 137);
   --separator-color: rgb(225, 225, 225);
+  --scrollbar-track-color: var(--separator-color);
+  --scrollbar-thumb-color: rgb(177, 177, 177);
   --outline-color: inherit;
 
   --icon-red: rgb(230, 115, 88);
@@ -83,4 +85,16 @@ blockquote {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 16px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
 }
