@@ -45,6 +45,33 @@
     }
   }
 
+  .articleLink {
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+    
+    .strike {
+      position: relative;
+      top: 13px;
+      width: 100%;
+      border-bottom: solid 2px var(--separator-color);
+    }
+
+    a {
+      display: block;
+      width: max-content;
+      margin: auto;
+      padding: 0 1ch;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.2ch;
+      color: var(--highlight-color);
+      background-color: var(--background-color);
+    }
+  }
+
   p {
     font-weight: 400;
     font-size: 16px;

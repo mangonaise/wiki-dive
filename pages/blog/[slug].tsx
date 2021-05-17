@@ -11,25 +11,43 @@ export default function Post({ metadata, content }: { metadata: PostMetadata, co
       <Head>
         <title>{metadata.title}</title>
       </Head>
-      <div className={styles.postInfo}>
-        <p className={styles.date}>
-          {format(new Date(metadata.date), 'MMM d, yyyy').toUpperCase()}
-        </p>
-        <h2>{metadata.title}</h2>
-        <div className={styles.tagsContainer}>
-          {metadata.tags.map(tag => (
-            <div className={styles.tag} key={tag}>
-              <CategoryIcon category={tag} className={styles.icon} sizePx={28} />
-              <span className={styles.label} style={{ color: `var(--category-${tag})` }}>
-                {tag.toUpperCase()}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
+      <PostInfoSection metadata={metadata} />
       <Markdown>
         {content}
       </Markdown>
+      {metadata.articleUrl && <ArticleLink url={metadata.articleUrl} />}
+    </div>
+  )
+}
+
+function PostInfoSection({ metadata }: { metadata: PostMetadata }) {
+  return (
+    <div className={styles.postInfo}>
+      <p className={styles.date}>
+        {format(new Date(metadata.date), 'MMM d, yyyy').toUpperCase()}
+      </p>
+      <h2>{metadata.title}</h2>
+      <div className={styles.tagsContainer}>
+        {metadata.tags.map(tag => (
+          <div className={styles.tag} key={tag}>
+            <CategoryIcon category={tag} className={styles.icon} sizePx={28} />
+            <span className={styles.label} style={{ color: `var(--category-${tag})` }}>
+              {tag.toUpperCase()}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function ArticleLink({ url }: { url: string }) {
+  return (
+    <div className={styles.articleLink}>
+      <div className={styles.strike} />
+      <a className={styles.articleLink} href={url} target="_blank">
+        VISIT ARTICLE
+      </a>
     </div>
   )
 }
