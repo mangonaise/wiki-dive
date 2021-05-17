@@ -40,8 +40,8 @@ const iconElements: IconMap = {
 
 interface Props { 
   category: PostCategory, 
-  sizePx: number ,
-  className: string
+  sizePx?: number,
+  className?: string
 }
 
 export default function CategoryIcon({ category, sizePx = 42, className }: Props) {

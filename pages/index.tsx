@@ -23,7 +23,6 @@ export default function Home({ postsData }: { postsData: PostMetadata[] }) {
       <div className={styles.postsGrid}>
         {postsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
       </div>
-      <div style={{ minHeight: '50px' }} />
     </div>
   )
 }

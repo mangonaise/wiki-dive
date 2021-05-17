@@ -14,6 +14,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <Navbar />
       <Component {...pageProps} />
+      <div style={{ minHeight: '50px' }} />
     </div>
   )
 }

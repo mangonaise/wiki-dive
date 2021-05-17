@@ -14,8 +14,8 @@
   --outline-color: inherit;
 
   --icon-red: rgb(230, 115, 88);
-  --icon-green: rgb(111, 202, 126);
-  --icon-blue: rgb(123, 148, 219);
+  --icon-green: rgb(108, 197, 123);
+  --icon-blue: rgb(131, 157, 228);
   --icon-pink: rgb(224, 109, 189);
 
   --category-animals: var(--icon-green);
@@ -34,6 +34,8 @@
   --category-society: var(--icon-blue);
   --category-space: var(--icon-pink);
   --category-technology: var(--icon-pink);
+
+  --post-width: 700px;
 }
 
 ::selection {
@@ -80,5 +82,5 @@ blockquote {
 #app {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 16px;
 }
