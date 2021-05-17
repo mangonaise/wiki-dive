@@ -59,7 +59,7 @@
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     border-top: solid 2px var(--separator-color);
     background-color: var(--background-color);
@@ -67,7 +67,7 @@
   }
 
   .navLink {
-    margin: 0 !important;
+    margin: 0 23px !important;
     height: fit-content;
   }
 }
