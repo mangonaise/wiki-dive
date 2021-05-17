@@ -1,7 +1,10 @@
 import Head from 'next/head'
+import Link from 'next/link';
+import CategoryIcon from '../components/CategoryIcon';
+import { getPostsData, PostMetadata } from '../ssg/posts';
 import styles from './styles/index.module.scss';
 
-export default function Home() {
+export default function Home({ postsData }: { postsData: PostMetadata[] }) {
   return (
     <div>
       <Head>
@@ -16,7 +19,38 @@ export default function Home() {
           simple blog dedicated to exploring the <span>most fascinating Wikipedia articles</span> ever written.
         </div>
       </div>
-      <h2 className={styles.postsHeader}>Posts</h2>
+      <h2 className={styles.postsHeader}>Recent posts</h2>
+      <div className={styles.postsGrid}>
+        {postsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
+      </div>
+      <div style={{ minHeight: '50px' }} />
     </div>
   )
+}
+
+function PostPreview({ metadata }: { metadata: PostMetadata }) {
+  const { slug, title, description, tags } = metadata;
+  const mainCategory = tags[0];
+
+  return (
+    <Link href={`/blog/${slug}`}>
+      <button className={styles.postPreview}>
+        <div className={styles.category}>
+          <CategoryIcon category={mainCategory} sizePx={32} className={styles.icon} />
+          <p style={{ color: `var(--category-${mainCategory})` }}>{mainCategory.toUpperCase()}</p>
+        </div>
+        <h3>{title}</h3>
+        <p className={styles.description}>{description}</p>
+      </button>
+    </Link>
+  )
+}
+
+export async function getStaticProps() {
+  const postsData = getPostsData();
+  return {
+    props: {
+      postsData
+    }
+  }
 }

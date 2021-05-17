@@ -26,7 +26,7 @@ function useAdaptiveFocusOutline() {
 
     function handleKeyboardInput(keyEvent: KeyboardEvent) {
       if (keyEvent.key === 'Tab') {
-        document.documentElement.style.setProperty('--outline-color', 'inherit');
+        document.documentElement.style.setProperty('--outline-color', 'var(--highlight-color)');
       }
     }
 

@@ -2,11 +2,32 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+export const postCategories = [
+  'animals',
+  'catastrophe',
+  'history',
+  'internet',
+  'language',
+  'mathematics',
+  'medicine',
+  'nature',
+  'people',
+  'places',
+  'politics',
+  'psychology',
+  'science',
+  'society',
+  'space',
+  'technology'] as const;
+
+export type PostCategory = typeof postCategories[number];
+
 export type PostMetadata = {
   slug: string,
   title: string,
   description: string,
-  date: string
+  date: string,
+  tags: PostCategory[]
 }
 
 const postsDirectory = path.join(process.cwd(), 'posts');

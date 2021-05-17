@@ -1,4 +1,4 @@
-import styles from './styles/CategoryIcon.module.scss';
+import { PostCategory } from '../ssg/posts'
 
 const AnimalsIcon     = () => { return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M25,22.14c-4.38,0-8.61,5.44-8.61,9s2.2,4.63,3.64,4.63c1.78,0,3.4-1.08,5-1.08,2.06,0,3,1.09,4.81,1.09,2.39,0,3.75-2,3.75-4.62C33.57,27.57,29.47,22.14,25,22.14Z" fill="currentColor" /><path d="M14.87,18.74c1.73-.18,3.11,1.7,3.11,3.78a2.84,2.84,0,0,1-2.21,3c-1.61.17-3-1.4-3.15-3.08S13.15,18.92,14.87,18.74Z" fill="currentColor" /><path d="M35.1,18.74c-1.72-.18-3.1,1.7-3.1,3.78a2.84,2.84,0,0,0,2.21,3c1.61.17,3-1.4,3.15-3.08S36.83,18.92,35.1,18.74Z" fill="currentColor" /><path d="M20.94,13c1.86-.1,3.25,2,3.14,4.21-.07,1.5-1.06,3-2.52,3.1-1.73.09-3.12-1.66-3.22-3.47S19.09,13.1,20.94,13Z" fill="currentColor" /><path d="M29.05,13c-1.87-.1-3.25,2-3.14,4.21.07,1.5,1.05,3,2.52,3.1,1.73.09,3.11-1.66,3.22-3.47S30.9,13.1,29.05,13Z" fill="currentColor" /></svg> }
 const CatastropheIcon = () => { return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M38.29,32.23,26.67,12a2,2,0,0,0-3.42,0L11.69,32.24a2,2,0,0,0,1.71,3.07H36.59A2,2,0,0,0,38.29,32.23ZM25,32.14A2.12,2.12,0,1,1,27.11,30,2.12,2.12,0,0,1,25,32.14Zm1.71-5.85a.77.77,0,0,1-.76.69H24a.78.78,0,0,1-.77-.7l-.53-6.11a.76.76,0,0,1,.76-.83h3.05a.77.77,0,0,1,.76.84Z" fill="currentColor" /></svg> }
@@ -17,25 +17,6 @@ const SocietyIcon     = () => { return <svg xmlns="http://www.w3.org/2000/svg" v
 const SpaceIcon       = () => { return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M29.56,33.2l0-4.72S34.12,25.36,35,22a19.94,19.94,0,0,0,.12-7.07.7.7,0,0,0-.61-.61,19.94,19.94,0,0,0-7.07.12c-3.36.9-6.48,5.48-6.48,5.48l-4.73,0a2.21,2.21,0,0,0-2.06,1.39l-2.28,4.49a1.11,1.11,0,0,0,1,1.52l4.75.05-1.07,1.07a1.42,1.42,0,0,0,0,2l1.22,1.21L19,32.85a1.42,1.42,0,0,0,2,0l1.07-1.07.05,4.75a1.11,1.11,0,0,0,1.52,1l4.49-2.28A2.22,2.22,0,0,0,29.56,33.2ZM27.82,21.64a2,2,0,1,1,2.81,0A2,2,0,0,1,27.82,21.64Z" fill="currentColor" /></svg> }
 const TechnologyIcon  = () => { return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M37.17,28.2l-2.31-1.33a9.8,9.8,0,0,0,0-3.74l2.31-1.33a.48.48,0,0,0,.23-.52,10.23,10.23,0,0,0-1.17-2.76,10.1,10.1,0,0,0-1.81-2.4.5.5,0,0,0-.57-.06l-2.3,1.33a10.23,10.23,0,0,0-3.23-1.87V12.87A.51.51,0,0,0,28,12.4,10.34,10.34,0,0,0,25,12a10.4,10.4,0,0,0-3,.36.51.51,0,0,0-.34.47v2.65a10.23,10.23,0,0,0-3.23,1.87l-2.3-1.33a.5.5,0,0,0-.57.06,10.1,10.1,0,0,0-1.81,2.4,10.59,10.59,0,0,0-1.17,2.76.48.48,0,0,0,.23.52l2.31,1.33a9.8,9.8,0,0,0,0,3.74L12.83,28.2a.48.48,0,0,0-.23.52,10.23,10.23,0,0,0,1.17,2.76,10.1,10.1,0,0,0,1.81,2.4.5.5,0,0,0,.57.06l2.3-1.33a10.23,10.23,0,0,0,3.23,1.87v2.65a.51.51,0,0,0,.34.47A10.34,10.34,0,0,0,25,38a10.4,10.4,0,0,0,3-.36.51.51,0,0,0,.34-.47V34.48a10.23,10.23,0,0,0,3.23-1.87l2.3,1.33a.5.5,0,0,0,.57-.06,10.1,10.1,0,0,0,1.81-2.4,10.59,10.59,0,0,0,1.17-2.76A.48.48,0,0,0,37.17,28.2ZM25,29.53A4.53,4.53,0,1,1,29.53,25,4.53,4.53,0,0,1,25,29.53Z" fill="currentColor" /></svg> }
 
-export const postCategories = [
-  'animals',
-  'catastrophe',
-  'history',
-  'internet',
-  'language',
-  'mathematics',
-  'medicine',
-  'nature',
-  'people',
-  'places',
-  'politics',
-  'psychology',
-  'science',
-  'society',
-  'space',
-  'technology'] as const;
-
-type PostCategory = typeof postCategories[number];
 type IconMap = { [category in PostCategory]: JSX.Element }
 
 const iconElements: IconMap = {
@@ -57,9 +38,21 @@ const iconElements: IconMap = {
   technology: <TechnologyIcon />
 }
 
-export default function CategoryIcon({ category }: { category: PostCategory }) {
+interface Props { 
+  category: PostCategory, 
+  sizePx: number ,
+  className: string
+}
+
+export default function CategoryIcon({ category, sizePx = 42, className }: Props) {
   return (
-    <div className={styles.iconContainer} style={{ backgroundColor: `var(--category-${category})`, width: '64px', height: '64px' }}>
+    <div
+      className={className}
+      style={{
+        backgroundColor: `var(--category-${category})`,
+        width: `${sizePx}px`, 
+        height: `${sizePx}px`,
+      }}>
       {iconElements[category]}
     </div>
   )
