@@ -28,6 +28,7 @@ function PostInfoSection({ metadata }: { metadata: PostMetadata }) {
         {format(new Date(metadata.date), 'MMM d, yyyy').toUpperCase()}
       </p>
       <h2>{metadata.title}</h2>
+      <p className={styles.description}>{metadata.description}</p>
       <div className={styles.tagsContainer}>
         {metadata.tags.map(tag => (
           <div className={styles.tag} key={tag}>
