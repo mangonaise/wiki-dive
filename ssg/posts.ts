@@ -18,7 +18,8 @@ export const postCategories = [
   'science',
   'society',
   'space',
-  'technology'] as const;
+  'technology',
+  'meta'] as const;
 
 export type PostCategory = typeof postCategories[number];
 
