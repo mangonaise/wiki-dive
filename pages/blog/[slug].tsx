@@ -24,6 +24,7 @@ function PostInfoSection({ metadata }: { metadata: PostMetadata }) {
   return (
     <div className={styles.postInfo}>
       <p className={styles.date}>
+        {metadata.index && <span>#{metadata.index}{' '}·{' '}</span>}
         {format(new Date(metadata.date), 'MMM d, yyyy').toUpperCase()}
       </p>
       <h2>{metadata.title}</h2>

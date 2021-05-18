@@ -24,6 +24,7 @@ export type PostCategory = typeof postCategories[number];
 
 export type PostMetadata = {
   slug: string,
+  index: number,
   title: string,
   description: string,
   date: string,
