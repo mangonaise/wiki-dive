@@ -37,8 +37,10 @@ function NavLink({ text, url }: NavLinkProps) {
 
   return (
     <Link href={url}>
-      <button className={`${styles.navLink} ${router.pathname === url ? styles.active : ''}`}>
-        {text}
+      <button className={styles.navLink}>
+        <span className={router.pathname === url ? styles.active : ''}>
+          {text}
+        </span>
       </button>
     </Link>
   )

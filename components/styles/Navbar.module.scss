@@ -28,25 +28,28 @@
     background: none;
     border: none;
     margin: 25px;
-    padding: 3px 0;
-    font-size: 15px;
-    font-weight: 450;
-    border-bottom: solid 2px var(--background-color);
-    transition: border-color 200ms, font-weight 200ms;
 
-    &.active {
-      border-color: var(--highlight-color);
-      font-weight: 800;
-      animation: font-slant forwards 250ms;
-    }
-
-    &:not(.active):hover {
-      border-color: var(--text-color);
+    span {
+      padding: 3px 0;
+      font-size: 15px;
+      font-weight: 450;
+      border-bottom: solid 2px var(--background-color);
+      transition: border-color 200ms, font-weight 200ms;
+  
+      &.active {
+        border-color: var(--highlight-color);
+        font-weight: 800;
+        animation: font-slant forwards 250ms;
+      }
+  
+      &:not(.active):hover {
+        border-color: var(--text-color);
+      }
     }
   }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 550px) {
   .navbar {
     margin: 15px;
     border-bottom: none;
@@ -67,8 +70,16 @@
   }
 
   .navLink {
-    margin: 0 23px !important;
+    box-sizing: content-box;
+    width: calc(60px + 12vw);
+    margin: 0 !important;
     height: fit-content;
+    display: flex;
+    justify-content: center;
+
+    &:not(:last-child) {
+      border-right: solid 2px var(--separator-color) !important;
+    }
   }
 }
 
