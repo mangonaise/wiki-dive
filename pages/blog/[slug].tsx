@@ -1,7 +1,7 @@
 import { getAllPostSlugs, getPostDataBySlug, PostMetadata } from '../../ssg/posts'
 import Markdown from 'markdown-to-jsx';
 import Head from 'next/head';
-import styles from './post.module.scss';
+import styles from './Post.module.scss';
 import { format } from 'date-fns';
 import CategoryIcon from '../../components/CategoryIcon';
 

@@ -2,20 +2,20 @@ import Head from 'next/head'
 import Link from 'next/link';
 import CategoryIcon from '../components/CategoryIcon';
 import { getPostsData, PostMetadata } from '../ssg/posts';
-import styles from './styles/index.module.scss';
+import styles from './styles/Home.module.scss';
 
 export default function Home({ postsData }: { postsData: PostMetadata[] }) {
   return (
     <div>
       <Head>
-        <title>wiki-dive</title>
+        <title>Wikidive</title>
       </Head>
       <div className={styles.landing}>
         <h2 className={styles.catchphrase}>
           <span>Level up </span>your daily scroll.
         </h2>
         <div className={styles.info}>
-          <strong>wiki-dive</strong> is a
+          <strong>Wikidive</strong> is a
           simple blog dedicated to exploring the <span>most fascinating Wikipedia articles</span> ever written.
         </div>
       </div>
