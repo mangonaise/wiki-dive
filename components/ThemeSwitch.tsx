@@ -32,6 +32,10 @@ export default function ThemeSwitch() {
     if (storedTheme === 'dark') {
       setTheme('dark');
     }
+
+    setTimeout(() => {
+      document.documentElement.style.setProperty('--theme-transition-time', '200ms');
+    }, 0);
   }, []);
 
   useEffect(() => {

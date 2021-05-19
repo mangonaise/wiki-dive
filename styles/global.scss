@@ -58,6 +58,7 @@
 
   --light-shadow: rgba(0,0,0,0.1) 1px 2px 4px 0px;
   --post-width: 700px;
+  --theme-transition-time: 0;
 }
 
 ::selection {
@@ -69,7 +70,7 @@ body {
   font-family: 'Recursive', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: background-color 200ms;
+  transition: background-color var(--theme-transition-time);
 }
 
 h1, h2, h3 {

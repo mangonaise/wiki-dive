@@ -34,7 +34,7 @@
       font-size: 15px;
       font-weight: 450;
       border-bottom: solid 2px var(--background-color);
-      transition: border-color 200ms, font-weight 200ms;
+      transition: border-color var(--theme-transition-time), font-weight 200ms;
   
       &.active {
         border-color: var(--highlight-color);
