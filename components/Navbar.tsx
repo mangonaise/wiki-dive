@@ -1,6 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import styles from './styles/Navbar.module.scss';
+import ThemeSwitch from './ThemeSwitch';
 
 const links: NavLinkProps[] = [
   { text: 'blog', url: '/' },
@@ -15,6 +16,7 @@ export default function Navbar() {
       <div className={styles.linksContainer}>
         {links.map(linkInfo => <NavLink key={linkInfo.url} text={linkInfo.text} url={linkInfo.url} />)}
       </div>
+      <ThemeSwitch />
     </nav>
   )
 }

@@ -23,14 +23,14 @@
   .info {
     max-width: 225px;
     background-color: var(--background-color);
-    border: solid 2.5px var(--text-color);
+    border: solid 2.5px var(--card-border-color);
     padding: 16px;
     margin-left: 40px;
     font-weight: 3750;
     text-align: center;
     line-height: 25px;
     border-radius: 2px;
-    @include util.border-shadow(var(--text-color));
+    @include util.border-shadow(var(--card-border-color));
 
     span {
       font-weight: 800;
@@ -62,11 +62,11 @@
   cursor: pointer;
   margin-bottom: 16px;
   padding: 16px 20px;
-  background-color: rgba(0, 0, 0, 0.02);
-  border: solid 2.5px var(--text-color);
+  background-color: var(--card-color);
+  border: solid 2.5px var(--card-border-color);
   border-radius: 2px;
   text-align: left;
-  @include util.border-shadow(var(--text-color));
+  @include util.border-shadow(var(--card-border-color));
 
   h3 {
     width: 100%;
@@ -86,7 +86,6 @@
   }
 
   .category {
-    --light-shadow: rgba(0,0,0,0.1) 1px 2px 4px 0px;
     position: relative;
     top: -17px;
     display: flex;

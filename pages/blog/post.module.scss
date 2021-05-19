@@ -1,15 +1,18 @@
+@use "/styles/util";
+
 .post {
   max-width: var(--post-width);
   margin: auto;
   margin-top: 0px;
-  padding-top: 16px;
-  border-top: solid 2px var(--separator-color);
 
   .postInfo {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     text-align: center;
-    padding-bottom: 12px;
-    border-bottom: solid 2px var(--separator-color);
+    padding: 16px;
+    background-color: var(--card-color);
+    border: solid 2.5px var(--card-border-color);
+    border-radius: 2px;
+    @include util.border-shadow(var(--card-border-color));
 
     h2 {
       font-variation-settings: 'slnt' -7.5;
@@ -19,7 +22,7 @@
 
     .date {
       font-size: 15px;
-      opacity: 0.5;
+      opacity: 0.8;
       letter-spacing: 0.3ch;
       margin: 0;
     }
@@ -27,7 +30,7 @@
     .description {
       margin: 10px 0;
       font-size: 15px;
-      opacity: 0.5;
+      opacity: 0.8;
     }
 
     .tagsContainer {

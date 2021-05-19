@@ -11,14 +11,32 @@
   --text-color: rgb(70, 70, 70);
   --highlight-color: rgb(0, 175, 137);
   --separator-color: rgb(225, 225, 225);
+  --card-color: rgba(0, 0, 0, 0.015);
+  --card-border-color: var(--text-color);
   --scrollbar-track-color: var(--separator-color);
   --scrollbar-thumb-color: rgb(177, 177, 177);
-  --outline-color: inherit;
+
+  --background-color-dark: rgb(50, 56, 59);
+  --background-color-alt-dark: rgb(39, 44, 46);
+  --text-color-dark: rgb(225, 225, 225);
+  --highlight-color-dark: rgb(0, 216, 169);
+  --separator-color-dark: rgb(70, 78, 83);
+  --card-color-dark: rgba(0, 0, 0, 0.15);
+  --card-border-color-dark: rgba(255, 255, 255, 0.7);
+  --scrollbar-track-color-dark: rgb(44, 50, 53);
+  --scrollbar-thumb-color-dark: rgb(32, 36, 39);
 
   --icon-red: rgb(230, 115, 88);
   --icon-green: rgb(108, 197, 123);
   --icon-blue: rgb(131, 157, 228);
   --icon-pink: rgb(224, 109, 189);
+  --icon-gray: rgb(170, 170, 170);
+
+  --icon-red-dark: rgb(236, 115, 88);
+  --icon-green-dark: rgb(116, 212, 132);
+  --icon-blue-dark: rgb(138, 166, 243);
+  --icon-pink-dark: rgb(238, 116, 201);
+  --icon-gray-dark: rgb(196, 196, 196);
 
   --category-animals: var(--icon-green);
   --category-catastrophe: var(--icon-red);
@@ -36,8 +54,9 @@
   --category-society: var(--icon-blue);
   --category-space: var(--icon-pink);
   --category-technology: var(--icon-pink);
-  --category-meta: rgb(170, 170, 170);
+  --category-meta: var(--icon-gray);
 
+  --light-shadow: rgba(0,0,0,0.1) 1px 2px 4px 0px;
   --post-width: 700px;
 }
 
@@ -50,6 +69,7 @@ body {
   font-family: 'Recursive', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  transition: background-color 200ms;
 }
 
 h1, h2, h3 {
