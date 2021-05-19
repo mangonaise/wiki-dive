@@ -1,8 +1,9 @@
 import { getAllPostSlugs, getPostDataBySlug, PostMetadata } from '../../ssg/posts'
+import { format } from 'date-fns';
+import { motion } from 'framer-motion';
 import Markdown from 'markdown-to-jsx';
 import Head from 'next/head';
 import styles from './Post.module.scss';
-import { format } from 'date-fns';
 import CategoryIcon from '../../components/CategoryIcon';
 
 export default function Post({ metadata, content }: { metadata: PostMetadata, content: string }) {
@@ -12,17 +13,26 @@ export default function Post({ metadata, content }: { metadata: PostMetadata, co
         <title>{metadata.title}</title>
       </Head>
       <PostInfoSection metadata={metadata} />
-      <Markdown>
-        {content}
-      </Markdown>
-      {metadata.articleUrl && <ArticleLink url={metadata.articleUrl} />}
+      <motion.div 
+        className={styles.content}
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.1, duration: 0.5 }}>
+        <Markdown>
+          {content}
+        </Markdown>
+        {metadata.articleUrl && <ArticleLink url={metadata.articleUrl} />}
+      </motion.div>
     </div>
   )
 }
 
 function PostInfoSection({ metadata }: { metadata: PostMetadata }) {
   return (
-    <div className={styles.postInfo}>
+    <motion.div
+      className={styles.postInfo}
+      layoutId={metadata.slug}
+      transition={{ ease: [0.13, 0.83, 0.61, 1], duration: 0.3 }}>
       <p className={styles.date}>
         {metadata.index && <span>#{metadata.index}{' '}·{' '}</span>}
         {format(new Date(metadata.date), 'MMM d, yyyy').toUpperCase()}
@@ -39,7 +49,7 @@ function PostInfoSection({ metadata }: { metadata: PostMetadata }) {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

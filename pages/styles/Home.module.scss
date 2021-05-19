@@ -58,57 +58,68 @@
 }
 
 .postPreview {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
   margin-bottom: 16px;
-  padding: 16px 20px;
   background-color: var(--card-color);
   border: solid 2.5px var(--card-border-color);
   border-radius: 2px;
-  text-align: left;
+  
   @include util.border-shadow(var(--card-border-color));
 
-  h3 {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: solid 2px var(--separator-color);
-    font-size: 20px;
-    font-weight: 700;
-    word-break: break-word;
-    font-variation-settings: 'slnt' -7.5;
-  }
-
-  .description {
-    opacity: 0.8;
-    font-size: 14px;
-  }
-
-  .category {
-    position: relative;
-    top: -17px;
+  button {
     display: flex;
-    align-items: center;
-    height: 0;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 16px 20px;
+    margin: 0;
+    text-align: left;
+    cursor: pointer;
 
-    .icon {
-      color: var(--background-color);
-      border-radius: 50%;
-      box-shadow: var(--light-shadow);
+    h3 {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: solid 2px var(--separator-color);
+      font-size: 20px;
+      font-weight: 700;
+      word-break: break-word;
+      font-variation-settings: 'slnt' -7.5;
     }
-
-    p {
-      margin-left: 10px;
-      font-weight: 800;
-      letter-spacing: 0.2ch;
-      background-color: var(--background-color);
-      padding: 4px 8px;
-      box-shadow: var(--light-shadow);
-      border-radius: 4px;
+  
+    .description {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+  
+    .category {
+      position: relative;
+      top: -17px;
+      display: flex;
+      align-items: center;
+      height: 0;
+  
+      .icon {
+        color: var(--background-color);
+        border-radius: 50%;
+        box-shadow: var(--light-shadow);
+      }
+  
+      p {
+        margin-left: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2ch;
+        background-color: var(--background-color);
+        padding: 4px 8px;
+        box-shadow: var(--light-shadow);
+        border-radius: 4px;
+      }
     }
   }
+
+  
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,11 +1,11 @@
 @use "/styles/util";
 
 .post {
-  max-width: var(--post-width);
   margin: auto;
   margin-top: 0px;
 
   .postInfo {
+    margin: auto;
     margin-bottom: 24px;
     text-align: center;
     padding: 16px;
@@ -53,6 +53,11 @@
         }
       }
     }
+  }
+
+  .content {
+    margin: auto;
+    max-width: var(--post-width);
   }
 
   a {

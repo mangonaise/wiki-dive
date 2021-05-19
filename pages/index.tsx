@@ -1,7 +1,8 @@
+import { getPostsData, PostMetadata } from '../ssg/posts';
+import { motion } from 'framer-motion';
 import Head from 'next/head'
 import Link from 'next/link';
 import CategoryIcon from '../components/CategoryIcon';
-import { getPostsData, PostMetadata } from '../ssg/posts';
 import styles from './styles/Home.module.scss';
 
 export default function Home({ postsData }: { postsData: PostMetadata[] }) {
@@ -33,14 +34,20 @@ function PostPreview({ metadata }: { metadata: PostMetadata }) {
 
   return (
     <Link href={`/blog/${slug}`}>
-      <button className={styles.postPreview}>
-        <div className={styles.category}>
-          <CategoryIcon category={mainCategory} sizePx={32} className={styles.icon} />
-          <p style={{ color: `var(--category-${mainCategory})` }}>{mainCategory.toUpperCase()}</p>
-        </div>
-        <h3>{title}</h3>
-        <p className={styles.description}>{description}</p>
-      </button>
+      <motion.div
+        className={styles.postPreview}
+        layoutId={slug}
+        whileHover={{ y: -5 }}
+        transition={{ ease: [0.11, 0.91, 0.32, 0.99], duration: 0.3 }}>
+        <button>
+          <div className={styles.category}>
+            <CategoryIcon category={mainCategory} sizePx={32} className={styles.icon} />
+            <p style={{ color: `var(--category-${mainCategory})` }}>{mainCategory.toUpperCase()}</p>
+          </div>
+          <h3>{title}</h3>
+          <p className={styles.description}>{description}</p>
+        </button>
+      </motion.div>
     </Link>
   )
 }
