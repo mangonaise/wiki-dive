@@ -1,12 +1,17 @@
 import { AnimateSharedLayout } from 'framer-motion';
+import { useRouter } from 'next/dist/client/router';
 import { AppProps } from 'next/app';
-import { useEffect } from 'react';
+import { createContext, useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import '../styles/global.scss';
 
+export const PreviousPageContext = createContext('');
+const PreviousPageProvider = PreviousPageContext.Provider;
+
 function App({ Component, pageProps }: AppProps) {
   useAdaptiveFocusOutline();
+  const previousPage = usePreviousPage();
 
   return (
     <div id="app">
@@ -14,9 +19,11 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       </Head>
       <Navbar />
-      <AnimateSharedLayout>
-        <Component {...pageProps} />
-      </AnimateSharedLayout>
+      <PreviousPageProvider value={previousPage}>
+        <AnimateSharedLayout>
+          <Component {...pageProps} />
+        </AnimateSharedLayout>
+      </PreviousPageProvider>
       <div style={{ minHeight: '50px' }} />
     </div>
   )
@@ -42,6 +49,27 @@ function useAdaptiveFocusOutline() {
       document.removeEventListener('keydown', e => handleKeyboardInput(e));
     }
   }, []);
+}
+
+function usePreviousPage() {
+  const router = useRouter();
+  const currentUrlRef = useRef('');
+  const previousUrlRef = useRef('');
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      previousUrlRef.current = currentUrlRef.current;
+      currentUrlRef.current = url;
+    }
+
+    router.events.on('routeChangeStart', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    }
+  }, []);
+
+  return previousUrlRef.current;
 }
 
 export default App;

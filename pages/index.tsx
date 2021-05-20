@@ -4,8 +4,11 @@ import Head from 'next/head'
 import Link from 'next/link';
 import CategoryIcon from '../components/CategoryIcon';
 import styles from './styles/Home.module.scss';
+import { useContext, useEffect, useRef } from 'react';
+import { PreviousPageContext } from './_app';
 
 export default function Home({ postsData }: { postsData: PostMetadata[] }) {
+
   return (
     <div>
       <Head>
@@ -29,8 +32,18 @@ export default function Home({ postsData }: { postsData: PostMetadata[] }) {
 }
 
 function PostPreview({ metadata }: { metadata: PostMetadata }) {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const previousPage = useContext(PreviousPageContext);
   const { slug, title, description, tags } = metadata;
   const mainCategory = tags[0];
+
+  useEffect(() => {
+    if (`/blog/${metadata.slug}` === previousPage) {
+      setTimeout(() => {
+        buttonRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      }, 0);
+    }
+  }, []);
 
   return (
     <Link href={`/blog/${slug}`}>
@@ -39,7 +52,7 @@ function PostPreview({ metadata }: { metadata: PostMetadata }) {
         layoutId={slug}
         whileHover={{ y: -5 }}
         transition={{ ease: [0.11, 0.91, 0.32, 0.99], duration: 0.3 }}>
-        <button>
+        <button ref={buttonRef}>
           <div className={styles.category}>
             <CategoryIcon category={mainCategory} sizePx={32} className={styles.icon} />
             <p style={{ color: `var(--category-${mainCategory})` }}>{mainCategory.toUpperCase()}</p>
