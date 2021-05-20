@@ -16,6 +16,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <div id="app">
       <Head>
+        <link rel="preload" href="/fonts/Recursive_VF_1.077.woff2" as="font" crossOrigin="" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       </Head>
       <Navbar />
