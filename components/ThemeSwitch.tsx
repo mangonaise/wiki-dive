@@ -35,7 +35,7 @@ export default function ThemeSwitch() {
 
     setTimeout(() => {
       document.documentElement.style.setProperty('--theme-transition-time', '200ms');
-    }, 0);
+    }, 500);
   }, []);
 
   useEffect(() => {

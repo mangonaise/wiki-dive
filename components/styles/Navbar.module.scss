@@ -5,6 +5,7 @@
   font-size: 30px;
   margin-right: 20px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   span {
     background-color: var(--highlight-color);

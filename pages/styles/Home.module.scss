@@ -1,7 +1,7 @@
 @use "/styles/util";
 
 .landing {
-  padding: 30px 5px;
+  padding: 30px 16px;
   background-color: var(--background-color-alt);
   border-radius: 2px;
   position: relative;
@@ -76,6 +76,7 @@
     margin: 0;
     text-align: left;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     h3 {
       width: 100%;
