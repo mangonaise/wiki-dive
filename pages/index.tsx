@@ -7,7 +7,12 @@ import styles from './styles/Home.module.scss';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { PreviousPageContext } from './_app';
 
-export default function Home({ recentPostsData }: { recentPostsData: PostMetadata[] }) {
+interface Props {
+  recentPostsData: PostMetadata[],
+  featuredPostsData: PostMetadata[]
+}
+
+export default function Home({ recentPostsData, featuredPostsData }: Props) {
   return (
     <div>
       <Head>
@@ -22,6 +27,15 @@ export default function Home({ recentPostsData }: { recentPostsData: PostMetadat
           simple blog dedicated to exploring the <span>most fascinating Wikipedia articles</span> ever written.
         </div>
       </div>
+
+      {featuredPostsData.length > 0 && <>
+        <h2 className={styles.postsHeader}>Featured posts</h2>
+        <div className={styles.postsGrid}>
+          {featuredPostsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
+        </div>
+      </>
+      }
+
       <h2 className={styles.postsHeader}>Recent posts</h2>
       <div className={styles.postsGrid}>
         {recentPostsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
@@ -69,10 +83,11 @@ function PostPreview({ metadata }: { metadata: PostMetadata }) {
 }
 
 export async function getStaticProps() {
-  const homepageData = getHomepageData();
+  const { recentPostsData, featuredPostsData } = getHomepageData();
   return {
     props: {
-      recentPostsData: homepageData.recentPostsData
+      recentPostsData,
+      featuredPostsData
     }
   }
 }

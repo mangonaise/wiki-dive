@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+const featuredPosts: string[] = [];
+
 export const postCategories = [
   'animals',
   'catastrophe',
@@ -39,9 +41,7 @@ export function getPostsData() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map(fileName => {
     const slug = fileName.replace('.md', '');
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const metadata = matter(fileContents).data;
+    const metadata = getPostDataBySlug(slug).metadata;
 
     return {
       slug,
@@ -65,7 +65,8 @@ export function getHomepageData() {
   const recentPostsLimit = 24 + futurePostsCount;
 
   return {
-    recentPostsData: allPostsData.splice(0, recentPostsLimit)
+    recentPostsData: allPostsData.splice(0, recentPostsLimit),
+    featuredPostsData: featuredPosts.map(slug => getPostDataBySlug(slug).metadata)
   }
 }
 
@@ -82,7 +83,7 @@ export function getAllPostSlugs() {
 
 export function getPostDataBySlug(slug: string) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
   const markdown = matter(fileContents);
   return {
     metadata: { slug, ...markdown.data } as PostMetadata,
