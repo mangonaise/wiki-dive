@@ -52,6 +52,23 @@ export function getPostsData() {
   return allPostsData.sort((a, b) => a.date < b.date ? 1 : -1);
 }
 
+export function getHomepageData() {
+  const allPostsData = getPostsData();
+  const buildTime = Date.now();
+  let futurePostsCount = 0;
+  allPostsData.forEach(metadata => {
+    if (new Date(metadata.date).valueOf() > buildTime) {
+      futurePostsCount++;
+    }
+  });
+
+  const recentPostsLimit = 24 + futurePostsCount;
+
+  return {
+    recentPostsData: allPostsData.splice(0, recentPostsLimit)
+  }
+}
+
 export function getAllPostSlugs() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map(fileName => {

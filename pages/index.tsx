@@ -1,14 +1,13 @@
-import { getPostsData, PostMetadata } from '../ssg/posts';
+import { getHomepageData, PostMetadata } from '../ssg/posts';
 import { motion } from 'framer-motion';
 import Head from 'next/head'
 import Link from 'next/link';
 import CategoryIcon from '../components/CategoryIcon';
 import styles from './styles/Home.module.scss';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { PreviousPageContext } from './_app';
 
-export default function Home({ postsData }: { postsData: PostMetadata[] }) {
-
+export default function Home({ recentPostsData }: { recentPostsData: PostMetadata[] }) {
   return (
     <div>
       <Head>
@@ -25,13 +24,17 @@ export default function Home({ postsData }: { postsData: PostMetadata[] }) {
       </div>
       <h2 className={styles.postsHeader}>Recent posts</h2>
       <div className={styles.postsGrid}>
-        {postsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
+        {recentPostsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
       </div>
     </div>
   )
 }
 
 function PostPreview({ metadata }: { metadata: PostMetadata }) {
+  if (new Date(metadata.date).valueOf() > Date.now()) {
+    return null;
+  }
+
   const buttonRef = useRef<HTMLButtonElement>(null);
   const previousPage = useContext(PreviousPageContext);
   const { slug, title, description, tags } = metadata;
@@ -66,10 +69,10 @@ function PostPreview({ metadata }: { metadata: PostMetadata }) {
 }
 
 export async function getStaticProps() {
-  const postsData = getPostsData();
+  const homepageData = getHomepageData();
   return {
     props: {
-      postsData
+      recentPostsData: homepageData.recentPostsData
     }
   }
 }
