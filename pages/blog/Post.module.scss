@@ -5,8 +5,11 @@
   margin-top: 0px;
 
   .postInfo {
+    box-sizing: border-box;
     margin: auto;
     margin-bottom: 24px;
+    width: fit-content;
+    min-width: min(var(--post-width), 100%);
     text-align: center;
     padding: 16px;
     background-color: var(--card-color);
@@ -103,6 +106,8 @@
 
 @media only screen and (min-width: 700px) {
   .postInfo {
+    padding: 16px 32px !important;
+
     h2 {
       font-size: 32px !important;
     }
