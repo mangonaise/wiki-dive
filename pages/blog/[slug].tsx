@@ -5,6 +5,7 @@ import Markdown from 'markdown-to-jsx';
 import Head from 'next/head';
 import styles from './Post.module.scss';
 import CategoryIcon from '../../components/CategoryIcon';
+import FooterLink from '../../components/FooterLink';
 
 export default function Post({ metadata, content }: { metadata: PostMetadata, content: string }) {
   return (
@@ -13,15 +14,15 @@ export default function Post({ metadata, content }: { metadata: PostMetadata, co
         <title>{metadata.title}</title>
       </Head>
       <PostInfoSection metadata={metadata} />
-      <motion.div 
+      <motion.div
         className={styles.content}
-        initial={{ opacity: 0 }} 
+        initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.1, duration: 0.5 }}>
         <Markdown>
           {content}
         </Markdown>
-        {metadata.articleUrl && <ArticleLink url={metadata.articleUrl} />}
+        {metadata.articleUrl && <FooterLink text="VISIT ARTICLE" url={metadata.articleUrl} newTab />}
       </motion.div>
     </div>
   )
@@ -50,17 +51,6 @@ function PostInfoSection({ metadata }: { metadata: PostMetadata }) {
         ))}
       </div>
     </motion.div>
-  )
-}
-
-function ArticleLink({ url }: { url: string }) {
-  return (
-    <div className={styles.articleLink}>
-      <div className={styles.strike} />
-      <a className={styles.articleLink} href={url} target="_blank">
-        VISIT ARTICLE
-      </a>
-    </div>
   )
 }
 

@@ -1,10 +1,11 @@
 import { AnimateSharedLayout } from 'framer-motion';
 import { useRouter } from 'next/dist/client/router';
 import { AppProps } from 'next/app';
-import { createContext, useEffect, useRef, useState } from 'react';
+import { createContext, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import '../styles/global.scss';
+import Spacer from '../components/Spacer';
 
 export const PreviousPageContext = createContext('');
 const PreviousPageProvider = PreviousPageContext.Provider;
@@ -27,7 +28,7 @@ function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </AnimateSharedLayout>
       </PreviousPageProvider>
-      <div style={{ minHeight: '50px' }} />
+      <Spacer height="64px" />
     </div>
   )
 }
