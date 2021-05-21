@@ -8,10 +8,10 @@
 :root {
   --background-color: rgb(248, 248, 248);
   --background-color-alt: hsl(157, 20%, 94%);
-  --text-color: rgb(70, 70, 70);
+  --text-color: rgb(75, 75, 75);
   --highlight-color: rgb(0, 175, 137);
   --separator-color: rgb(225, 225, 225);
-  --card-color: hsl(0, 0%, 95%);
+  --card-color: hsl(0, 0%, 94%);
   --card-border-color: var(--text-color);
   --scrollbar-track-color: var(--separator-color);
   --scrollbar-thumb-color: rgb(177, 177, 177);
@@ -85,6 +85,7 @@ p {
 button {
   font-family: inherit;
   color: var(--text-color);
+  -webkit-tap-highlight-color: transparent;
 }
 
 button, input, a {
@@ -103,10 +104,16 @@ blockquote {
   opacity: 0.8;
 }
 
+.sectionHeader {
+  margin: 14px 0 28px;
+  padding-bottom: 5px;
+  border-bottom: solid 2px var(--separator-color);
+}
+
 #app {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 12px;
 }
 
 ::-webkit-scrollbar {

@@ -37,7 +37,7 @@ export type PostMetadata = {
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-export function getPostsData() {
+export function getAllPostsData() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map(fileName => {
     const slug = fileName.replace('.md', '');
@@ -53,7 +53,7 @@ export function getPostsData() {
 }
 
 export function getHomepageData() {
-  const allPostsData = getPostsData();
+  const allPostsData = getAllPostsData();
   const buildTime = Date.now();
   let futurePostsCount = 0;
   allPostsData.forEach(metadata => {

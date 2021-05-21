@@ -1,11 +1,11 @@
+import { useContext, useEffect, useRef } from 'react';
 import { getHomepageData, PostMetadata } from '../ssg/posts';
 import { motion } from 'framer-motion';
+import { PreviousPageContext } from './_app';
 import Head from 'next/head'
 import Link from 'next/link';
 import CategoryIcon from '../components/CategoryIcon';
 import styles from './styles/Home.module.scss';
-import { useContext, useEffect, useRef, useState } from 'react';
-import { PreviousPageContext } from './_app';
 
 interface Props {
   recentPostsData: PostMetadata[],
@@ -31,14 +31,14 @@ export default function Home({ recentPostsData, featuredPostsData }: Props) {
       </div>
 
       {featuredPostsData.length > 0 && <>
-        <h2 className={styles.postsHeader}>Featured posts</h2>
+        <h2 className="sectionHeader">Featured posts</h2>
         <div className={styles.postsGrid}>
           {featuredPostsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
         </div>
       </>
       }
 
-      <h2 className={styles.postsHeader}>Recent posts</h2>
+      <h2 className="sectionHeader">Recent posts</h2>
       <div className={styles.postsGrid}>
         {recentPostsData
           .filter(metadata => new Date(metadata.date).valueOf() <= currentTime)

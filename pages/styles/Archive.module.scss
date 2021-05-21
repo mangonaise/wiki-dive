@@ -1,0 +1,52 @@
+.year {
+  margin: 30px 0 22px;
+  letter-spacing: 0.2ch;
+  font-size: 18px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.openPostButton {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 24px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+
+  .date {
+    text-align: left;
+    min-width: 60px;
+    opacity: 0.6;
+    font-size: 14px;
+  }
+  
+  .title {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 2px;
+  }
+
+  &:hover {
+    .title {
+      background-color: var(--card-color);
+      transition: background-color 200ms;
+
+      span {
+        opacity: 0.85;
+        transition: opacity 200ms;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .openPostButton .title {
+    font-size: 16px;
+  }
+}
