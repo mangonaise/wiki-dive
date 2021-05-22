@@ -17,7 +17,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <div id="app">
       <Head>
-        <link rel="preload" href="/fonts/Recursive_VF_1.077.woff2" as="font" crossOrigin="" />
+        <link rel="preload" href="/fonts/Recursive.woff2" as="font" crossOrigin="" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
