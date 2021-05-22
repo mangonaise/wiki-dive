@@ -21,7 +21,7 @@ export default function Archive({ postsData }: { postsData: ArchiveData }) {
         <div key={data.year}>
           <h3 className={styles.year}>{data.year}</h3>
           {data.posts.map(postData => (
-            <Link href={'/blog/' + postData.slug} key={postData.slug}>
+            <Link href={'/posts/' + postData.slug} key={postData.slug}>
               <button className={styles.openPostButton} key={postData.title}>
                 <div className={styles.date}>{postData.dateString}</div>
                 <div className={styles.title}><span>{postData.title}</span></div>

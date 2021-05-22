@@ -60,7 +60,7 @@ function PostPreview({ metadata }: { metadata: PostMetadata }) {
   const mainCategory = tags[0];
 
   useEffect(() => {
-    if (`/blog/${metadata.slug}` === previousPage) {
+    if (`/posts/${metadata.slug}` === previousPage) {
       setTimeout(() => {
         buttonRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' });
       }, 0);
@@ -68,7 +68,7 @@ function PostPreview({ metadata }: { metadata: PostMetadata }) {
   }, []);
 
   return (
-    <Link href={`/blog/${slug}`}>
+    <Link href={`/posts/${slug}`}>
       <motion.div
         className={styles.postPreview}
         layoutId={slug}
