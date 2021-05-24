@@ -20,7 +20,7 @@ export default function Support() {
           <a href="https://www.instagram.com/wikidive.blog/" target="_blank">Instagram</a>,{' '}
           <a href="https://twitter.com/wiki_dive" target="_blank">Twitter</a> and{' '}
           <a href="https://www.reddit.com/r/wikidive/" target="_blank">Reddit</a>.{' '}
-          I update these channels when I make a new post, so it's a great way to stay updated.
+          I update these channels when I post, so it's a great way to stay in the loop.
           <br/><br/>
           Another free way to support the blog is to suggest an article.
           It saves me time on curating content. 
