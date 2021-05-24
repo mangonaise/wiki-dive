@@ -104,6 +104,12 @@ blockquote {
   opacity: 0.8;
 }
 
+a {
+  text-decoration: none;
+  color: var(--highlight-color);
+  font-weight: 800;
+}
+
 .sectionHeader {
   margin: 14px 0 28px;
   padding-bottom: 5px;
