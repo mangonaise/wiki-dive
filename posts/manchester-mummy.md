@@ -1,5 +1,6 @@
 ---
 title: Manchester Mummy
+index: 1
 description: The tale of a woman whose fear of being buried alive left her corpse on display 100 years after her death.
 date: '2021-05-24'
 articleUrl: https://en.wikipedia.org/wiki/Manchester_Mummy
