@@ -1,11 +1,15 @@
 import { getAllPostSlugs, getPostDataBySlug, PostMetadata } from '../../ssg/posts'
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Markdown from 'markdown-to-jsx';
 import Head from 'next/head';
 import styles from './Post.module.scss';
 import CategoryIcon from '../../components/CategoryIcon';
 import FooterLink from '../../components/FooterLink';
+import { faInstagram, faRedditAlien, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import Spacer from '../../components/Spacer';
+
 
 export default function Post({ metadata, content }: { metadata: PostMetadata, content: string }) {
   return (
@@ -23,6 +27,8 @@ export default function Post({ metadata, content }: { metadata: PostMetadata, co
           {content}
         </Markdown>
         {metadata.articleUrl && <FooterLink text="VISIT ARTICLE" url={metadata.articleUrl} newTab />}
+        <Spacer height="32px" />
+        <SocialMediaLinks />
       </motion.div>
     </div>
   )
@@ -51,6 +57,22 @@ function PostInfoSection({ metadata }: { metadata: PostMetadata }) {
         ))}
       </div>
     </motion.div>
+  )
+}
+
+function SocialMediaLinks() {
+  return (
+    <div className={styles.socialLinks}>
+      <a href="https://www.reddit.com/r/wikidive/">
+        <FontAwesomeIcon icon={faTwitter} />
+      </a>
+      <a href="https://www.instagram.com/wikidive.blog/">
+        <FontAwesomeIcon icon={faInstagram} />
+      </a>
+      <a href="https://www.reddit.com/r/wikidive/">
+        <FontAwesomeIcon icon={faRedditAlien} />
+      </a>
+    </div>
   )
 }
 

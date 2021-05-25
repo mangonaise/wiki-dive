@@ -63,6 +63,19 @@
     max-width: var(--post-width);
   }
 
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: flex;
+      width: 32px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 16px;
+    }
+  }
+
   a {
     font-weight: 700;
     color: var(--highlight-color);
