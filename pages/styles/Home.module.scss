@@ -124,9 +124,10 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 625px) {
   .landing {
     flex-direction: column;
+    padding-top: 16px;
 
     .catchphrase {
       font-size: 40px;

@@ -26,7 +26,7 @@ Laika was placed in the capsule, where she remained for three days before launch
 
 > ... after placing Laika in the container and before closing the hatch, we kissed her nose and wished her bon voyage, knowing that she would not survive the flight.
 
-Upon launch, Laika's heart rate more than doubled, and her rate of breathing more than tripled. After about three hours of being in the zero-G environment of orbit, she finally began to calm down and eat some of her food. However, by this time Laika was doomed to die very soon. The thermal regulation system had failed, and the temperature in the capsule was like that of the inside of a car on a hot day. After between five and seven hours, Laika had overheated and perished. She was three years old.
+Upon launch, Laika's heart rate more than doubled, and her rate of breathing more than tripled. After about three hours in the zero-G environment of orbit, she finally began to calm down and eat some of her food. However, by this time Laika was doomed to die very soon. The thermal regulation system had failed, and the temperature in the capsule was like that of the inside of a car on a hot day. After between five and seven hours, Laika had overheated and perished. She was three years old.
 
 Although Laika's mission paved the way for humans to make their way into space, many people condemn the decision to send a dog to its death, no matter the insights gained. Unlike Yuri Gagarin, the first human to enter outer space, Laika was incapable of comprehending or agreeing to the risks of spaceflight. 
 
