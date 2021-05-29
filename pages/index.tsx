@@ -13,8 +13,6 @@ interface Props {
 }
 
 export default function Home({ recentPostsData, featuredPostsData }: Props) {
-  const currentTime = Date.now();
-
   return (
     <div>
       <Head>
@@ -40,20 +38,13 @@ export default function Home({ recentPostsData, featuredPostsData }: Props) {
 
       <h2 className="sectionHeader">Recent posts</h2>
       <div className={styles.postsGrid}>
-        {recentPostsData
-          .filter(metadata => new Date(metadata.date).valueOf() <= currentTime)
-          .splice(0, 24)
-          .map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
+        {recentPostsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
       </div>
     </div>
   )
 }
 
 function PostPreview({ metadata }: { metadata: PostMetadata }) {
-  if (new Date(metadata.date).valueOf() > Date.now()) {
-    return null;
-  }
-
   const buttonRef = useRef<HTMLButtonElement>(null);
   const previousPage = useContext(PreviousPageContext);
   const { slug, title, description, tags } = metadata;

@@ -38,34 +38,32 @@ export type PostMetadata = {
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getAllPostsData() {
+  const buildTime = Date.now();
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map(fileName => {
-    const slug = fileName.replace('.md', '');
-    const metadata = getPostDataBySlug(slug).metadata;
+  const allPostsData = fileNames
+    .map(fileName => {
+      const slug = fileName.replace('.md', '');
+      const metadata = getPostDataBySlug(slug).metadata;
 
-    return {
-      slug,
-      ...metadata,
-    } as PostMetadata
-  });
+      if (new Date(metadata.date).valueOf() > buildTime) {
+        return null;
+      }
+
+      return {
+        slug,
+        ...metadata,
+      } as PostMetadata
+    })
+    .filter(postData => postData !== null);
 
   return allPostsData.sort((a, b) => a.date < b.date ? 1 : -1);
 }
 
 export function getHomepageData() {
   const allPostsData = getAllPostsData();
-  const buildTime = Date.now();
-  let futurePostsCount = 0;
-  allPostsData.forEach(metadata => {
-    if (new Date(metadata.date).valueOf() > buildTime) {
-      futurePostsCount++;
-    }
-  });
-
-  const recentPostsLimit = 24 + futurePostsCount;
 
   return {
-    recentPostsData: allPostsData.splice(0, recentPostsLimit),
+    recentPostsData: allPostsData.splice(0, 24),
     featuredPostsData: featuredPosts.map(slug => getPostDataBySlug(slug).metadata)
   }
 }
