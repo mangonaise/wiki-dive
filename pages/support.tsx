@@ -29,8 +29,8 @@ export default function Support() {
           If you're feeling extra nice, you can make a{' '}
           <a href="https://www.paypal.com/paypalme/wikidive" target="_blank">one-time PayPal donation</a>.
           <br/><br/>
-          <div style={{ margin: 'auto', textAlign: 'center' }}>❤️</div>
         </p>
+        <div style={{ textAlign: 'center' }}>❤️</div>
       </div>
     </div>
   )
