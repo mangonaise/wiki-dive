@@ -2,7 +2,7 @@
 title: How the Hindenburg disaster ended the airship era
 index: 6
 description: The fate of airships was sealed when this German zeppelin burst into flames in 1937.
-date: '1999-06-04'
+date: '2021-06-04'
 articleUrl: https://en.wikipedia.org/wiki/Hindenburg_disaster
 tags:
   - catastrophe
