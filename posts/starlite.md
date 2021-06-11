@@ -1,0 +1,22 @@
+---
+title: The secret supermaterial
+index: 9
+description: The strange story of Starlite, a mysterious substance capable of resisting extreme heat.  
+date: '2021-06-11'
+articleUrl: https://en.wikipedia.org/wiki/Starlite
+tags:
+  - technology
+  - science
+---
+
+Today we'll be diving into a story about a coveted wonder material, a paranoid inventor, closely guarded secrets, and eggs.
+
+It all begins with a man named Maurice Ward. Working as a hairdresser by day in the 1960s, Ward would spend his spare time experimenting and inventing things. Prompted by a fatal plane fire incident in 1985, he dedicated his efforts towards developing a new material - one that could withstand extreme temperatures, and that also would not give off any toxic fumes in the presence of fire. After much tinkering, Ward devised a formulation for a substance that would go on to become known as Starlite. Claiming that it could easily resist temperatures up to thousands of degrees, Ward was convinced that this material could change the world. But he was hell-bent on keeping the formula under his control, and following his invention, Ward became secretive and stubborn. He died in 2011, and it's not clear how much of Starlite's secret he took with him to the grave.
+
+Starlite saw a surge in interest in 1993 when its remarkable properties were demonstrated on *Tomorrow's World*, a British TV show exploring inventions poised to transform the future. Among other landmark technologies, the series introduced the public to the home computer and the mobile phone. Starlite's televised demo was certainly impressive, and it made the material appear very promising. An egg was coated in the substance, and a blowtorch was left blasting it with a 1200 °C (2200 °F) flame for several minutes. Immediately after turning off the flame, the show's presenter picked up the egg and placed the blowtorched surface in his hand. Because Starlite is an extremely effective insulator, the egg only felt slightly warm to the touch. As a final spectacle, the presenter cracked the egg into a bowl, revealing that Starlite had kept it completely raw.
+
+The appearance on television attracted a massive wave of new attention towards Starlite and its inventor. Maurice Ward was approached by several entities, from NASA to the UK's Ministry of Defense. Ward did agree to allow some organizations to perform tests on Starlite, but fearing that his formula would be reverse engineered, he never let them keep samples. Convinced that his work was worth billions, Ward became increasingly cynical about the commercialization of Starlite. He never patented or licensed the formula, worried that his work would be stolen and that the vicious business world would take advantage of him. As a result, Ward decided to keep the recipe to himself.
+
+Thermashield, a Californian chemical startup, claims to have replicated Starlite, also supposedly holding the rights to the formula. However, that was back in 2013, and there hasn't been much word from them since - we can't even know if Thermashield is using the same process as Maurice Ward. But these days, Starlite isn't the only material of its kind, and it seems highly unlikely that a leak of Ward's formulation would shock the world now. Whatever exact ingredients are in the recipe, Starlite is just one of many intumescent materials, substances that swell and char when exposed to high temperatures. In fact, you could go buy some intumescent paint right now. What's more, attempts have been made to create materials very similar to Starlite using just basic ingredients. Check out [this video](https://www.youtube.com/watch?v=0IbWampaEcM) documenting the process of making extremely heat-resistant intumescent tiles with flour, corn starch, sugar, and baking soda. The creator presents an impressive blowtorch test of his own. 
+
+Maybe Starlite is superior to all the intumescent substances available today. But it seems more likely that the hype and mystery surrounding Maurice Ward and his invention, rather than the promise of a future-defining supermaterial, is what continues to bring attention to the subject. That said, the thought of a revolutionary technology lost to time will always be fascinating. If you'd like to learn a bit more about Starlite, you can check out today's article linked below.
