@@ -1,0 +1,46 @@
+@use "/styles/util";
+
+.header { 
+  @include util.border-shadow(var(--highlight-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--background-color);
+  border: solid 2.5px var(--highlight-color);
+  border-radius: 2px;
+  padding: 16px 24px;
+  margin: auto;
+  margin-bottom: 36px;
+  margin-top: 8px;
+  height: fit-content;
+  width: fit-content;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    font-variation-settings: 'slnt' -7.5;
+  }
+}
+
+.content {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  line-height: 24px;
+
+  p {
+    margin-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .content p {
+    margin-bottom: 16px;
+  }
+}
