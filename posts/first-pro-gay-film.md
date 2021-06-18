@@ -11,7 +11,7 @@ tags:
 
 Significant progress within the LGBT movement is a relatively recent achievement. If we take the United States as an example, it wasn't until around 2011 that a majority of the public finally came around to supporting marriage equality.
 
-Of course, being LGBT did not become more normal, only more normalized. It has always been an entirely non-radical concept. Queer people have known this throughout all of history, but have had to keep it a secret out of self-preservation.
+Of course, being LGBT did not become more normal, only more normalized. It has always been an entirely non-radical concept. Queer people have known this throughout all of history, but have had to keep their identities a secret out of self-preservation.
 
 Key to progress has been representation on the screen. Film is a truly special art form, with its power to transport people out of their own lives - and, by extension, away from their own prejudices. If done correctly, a film can invite a viewer to sympathize with someone that they would have otherwise shunned in real life.
 
@@ -19,7 +19,7 @@ LGBT advocates saw the potential of cinema in its earliest days. But film, like 
 
 Under the rule of Nazi Germany, all media was tightly controlled, with film being treated as high-risk. But for a brief time before Hitler's appointment as chancellor in 1933, there was the Reimar Republic, which emerged after World War I. The Reimar Republic saw plenty of crisis in its day, but one thing to note is that the constitution of this post-war German state was explicitly anti-censorship.
 
-It's in this era that our story begins. Magnus Hirschfeld, a Berlin-based doctor, had been offering therapy to gay patients struggling with shame and depression. Hirschfeld himself was gay, and this, combined with the fact that many of his patients took their own lives as a result of guilt and social persecution, gave him the drive to transform public opinion on LGBT people and relationships. So, with the simultaneous births of both the film industry and the less-restrictive Reimar Republic, Hirschfeld took the opportunity to co-write and fund a new movie titled *Anders als die Andern*.
+It's in this era that today's story begins. Magnus Hirschfeld, a Berlin-based doctor, had been offering therapy to gay patients struggling with shame and depression. Hirschfeld himself was gay, and this, combined with the fact that many of his patients took their own lives as a result of guilt and social persecution, gave him the drive to transform public opinion on LGBT people and relationships. So, with the simultaneous births of both the film industry and the less-restrictive Reimar Republic, Hirschfeld took the opportunity to co-write and fund a new movie titled *Anders als die Andern*.
 
 The film's name translates to *Different from the Others*, and it was created mainly as a response to Paragraph 175, which made homosexuality a crime under German law. Portraying a romance between two men, the backlash it eventually caused was inevitable, but the film was actually embraced by its audience when it premiered in 1919. *Different from the Others* approaches homosexuality from a sympathetic angle; the romance is described as being totally normal, and the homophobia suffered by the two lovers is presented as a cruel injustice.
 
