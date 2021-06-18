@@ -63,7 +63,7 @@ function PostInfoSection({ metadata }: { metadata: PostMetadata }) {
 function SocialMediaLinks() {
   return (
     <div className={styles.socialLinks}>
-      <a href="https://www.reddit.com/r/wikidive/">
+      <a href="https://twitter.com/wiki_dive">
         <FontAwesomeIcon icon={faTwitter} />
       </a>
       <a href="https://www.instagram.com/wikidive.blog/">
