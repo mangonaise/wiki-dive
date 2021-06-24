@@ -29,6 +29,8 @@ export default function Post({ metadata, content }: { metadata: PostMetadata, co
         {metadata.articleUrl && <FooterLink text="VISIT ARTICLE" url={metadata.articleUrl} newTab />}
         <Spacer height="32px" />
         <SocialMediaLinks />
+        <Spacer height="32px" />
+        <FooterLink text="SUPPORT" url='/support' />
       </motion.div>
     </div>
   )
