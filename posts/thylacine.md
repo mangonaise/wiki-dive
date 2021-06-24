@@ -9,7 +9,7 @@ tags:
   - history
 ---
 
-Extinctions are nothing new: almost all of the several billion species that have existed on Earth aren't around anymore. What is relatively new, though, is the invention of cameras. We're living in a new age, one where extinct species have been immortalized in picture and video. Watching footage of these animals is a truly strange experience. There's something heartbreaking about seeing videos of these beautiful creatures with the knowledge that they no longer walk the earth, especially in cases where human activity drove them to extinction.
+Extinctions are nothing new: almost all of the several billion species that have existed on Earth aren't around anymore. What is relatively new, though, is the invention of cameras. We're living in a new age, one where extinct species have been immortalized in picture and video. Watching footage of these animals is a truly strange experience. It's heartbreaking to see videos of these beautiful creatures with the knowledge that they no longer walk the earth, especially in cases where human activity drove them to extinction.
 
 Today's article is about the thylacine, otherwise known as the Tasmanian tiger. It was a magnificent animal, a marsupial that looked like a combination of a tiger and a wolf, with a striped back and thoughtful eyes. Unfortunately, only [footage of thylacines in captivity](https://www.youtube.com/watch?v=5RPap1BWYns) exists.
 
