@@ -31,20 +31,20 @@ export default function Home({ recentPostsData, featuredPostsData }: Props) {
       {featuredPostsData.length > 0 && <>
         <h2 className="sectionHeader">Featured posts</h2>
         <div className={styles.postsGrid}>
-          {featuredPostsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
+          {featuredPostsData.map((metadata, index) => <PostPreview metadata={metadata} zIndex={index} key={metadata.slug} />)}
         </div>
       </>
       }
 
       <h2 className="sectionHeader">Recent posts</h2>
       <div className={styles.postsGrid}>
-        {recentPostsData.map(metadata => <PostPreview metadata={metadata} key={metadata.slug} />)}
+        {recentPostsData.map((metadata, index) => <PostPreview metadata={metadata} zIndex={3 + index} key={metadata.slug} />)}
       </div>
     </div>
   )
 }
 
-function PostPreview({ metadata }: { metadata: PostMetadata }) {
+function PostPreview({ metadata, zIndex }: { metadata: PostMetadata, zIndex: number }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const previousPage = useContext(PreviousPageContext);
   const { slug, title, description, tags } = metadata;
@@ -62,6 +62,7 @@ function PostPreview({ metadata }: { metadata: PostMetadata }) {
     <Link href={`/posts/${slug}`}>
       <motion.div
         className={styles.postPreview}
+        style={{ zIndex: zIndex }}
         layoutId={slug}
         whileHover={{ y: -5 }}
         transition={{ ease: [0.11, 0.91, 0.32, 0.99], duration: 0.3 }}>

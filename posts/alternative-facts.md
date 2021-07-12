@@ -1,7 +1,7 @@
 ---
 title: Alternative facts
 index: 16
-description: A look into the phrase that will go down in history as one of the most bizarre things ever to be uttered by a political figure. 
+description: A look into the phrase that will go down in history as one of the most bizarre things ever uttered by a political figure. 
 date: '2021-07-12'
 articleUrl: https://en.wikipedia.org/wiki/Alternative_facts
 tags:
